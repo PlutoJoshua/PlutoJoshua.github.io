@@ -5,7 +5,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'Pretendard', 'system-ui', 'sans-serif'],
+        sans: [
+          'Inter',
+          'Pretendard Variable',
+          'Pretendard',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'system-ui',
+          'sans-serif',
+        ],
       },
       colors: {
         ink: '#101014',

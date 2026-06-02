@@ -6,6 +6,7 @@ import SectionLabel from '../components/SectionLabel';
 import Pill from '../components/Pill';
 import SkillCard from '../components/SkillCard';
 import GitHubMark from '../components/GitHubMark';
+import profilePhoto from '../assets/profile.jpg';
 
 const LINK_ICONS = { github: GitHubMark, Globe2, Mail };
 
@@ -15,6 +16,20 @@ export default function About() {
       {/* Hero */}
       <section className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pt-16">
         <div>
+          <div className="mb-8 flex items-center gap-4">
+            <img
+              src={profilePhoto}
+              alt={`${profile.name} 프로필 사진`}
+              width="72"
+              height="72"
+              loading="eager"
+              className="h-[72px] w-[72px] shrink-0 rounded-full object-cover object-top shadow-soft ring-2 ring-white dark:ring-paper-d"
+            />
+            <div>
+              <p className="text-lg font-bold tracking-tight">{profile.name}</p>
+              <p className="text-sm text-muted dark:text-muted-d">{profile.role}</p>
+            </div>
+          </div>
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur dark:border-line-d dark:bg-paper-d/70 dark:text-muted-d">
             <Sparkles className="h-4 w-4 text-accent" />
             {profile.badge}

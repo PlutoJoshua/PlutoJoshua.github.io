@@ -16,6 +16,8 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Inter', 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
 }
 
 a {
