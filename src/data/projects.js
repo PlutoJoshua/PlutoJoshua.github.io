@@ -1,0 +1,81 @@
+// 프로젝트 목록. Projects 페이지와 About 미리보기에서 사용.
+// links: { github, demo } — 없으면 internal/private 표기.
+export const projects = [
+  {
+    name: 'CuUnit AI 챗봇',
+    category: 'AI · FinTech',
+    status: '진행중',
+    year: '2024 –',
+    role: 'AI Engineer',
+    description:
+      'MCP와 LangGraph를 기반으로 외환 서비스의 조회, 분석, 안내 흐름을 자동화하는 AI 어시스턴트입니다.',
+    highlights: [
+      '외환 조회·분석·안내 흐름을 도구 호출로 자동화',
+      'LangGraph 상태 기반 멀티스텝 대화 설계',
+    ],
+    stack: ['MCP', 'LangGraph', 'Python', 'FX Data'],
+    links: {},
+  },
+  {
+    name: 'Builder',
+    category: 'Multi-Agent System',
+    status: '심사중',
+    year: '2024',
+    role: 'Creator',
+    description:
+      '기획부터 구현까지 이어지는 AI 멀티에이전트 시스템. 비개발자의 아이디어를 동작하는 MVP로 바꾸는 실험입니다.',
+    highlights: [
+      '기획 → 설계 → 구현 에이전트 파이프라인',
+      'Google ADK + LiteLLM 기반 멀티 LLM 오케스트레이션',
+    ],
+    stack: ['FastAPI', 'Next.js', 'Google ADK', 'LiteLLM'],
+    links: { github: 'https://github.com/PlutoJoshua/Builder' },
+  },
+  {
+    name: 'hedge-decision-engine',
+    category: 'Forecasting',
+    status: '진행중',
+    year: '2024',
+    role: 'ML Engineer',
+    description: '환율 예측과 환헤지 의사결정을 돕는 금융 모델링 엔진입니다.',
+    highlights: [
+      'TFT·N-BEATS·CRNN 다중 모델 앙상블 실험',
+      '환헤지 의사결정 시그널 산출',
+    ],
+    stack: ['Python', 'TFT', 'N-BEATS', 'CRNN'],
+    links: { github: 'https://github.com/PlutoJoshua/hedge-decision-engine' },
+  },
+  {
+    name: 'FinAgent',
+    category: 'Financial Agent',
+    status: '완료',
+    year: '2024',
+    role: 'Developer',
+    description: '금융 데이터를 읽고 투자 판단 흐름을 보조하는 LangChain 기반 AI 에이전트입니다.',
+    highlights: ['LangChain 도구 체인으로 금융 데이터 해석', '투자 판단 보조 흐름 구성'],
+    stack: ['Python', 'LangChain'],
+    links: { github: 'https://github.com/PlutoJoshua/fin-agent' },
+  },
+  {
+    name: '유람 U,ram',
+    category: 'AI Matching',
+    status: '진행중',
+    year: '2024 –',
+    role: 'Product Builder',
+    description: '사주 기반 관계 데이터를 활용해 더 자연스러운 인연 탐색을 돕는 AI 데이팅 서비스입니다.',
+    highlights: ['사주 기반 관계 추천 로직', 'Flutter 크로스플랫폼 앱'],
+    stack: ['Flutter', 'AI', 'Recommendation'],
+    links: { github: 'https://github.com/PlutoJoshua/persnal_project_dating_app' },
+  },
+  {
+    name: 'amuguna',
+    category: 'Voice AI',
+    status: '완료',
+    year: '2024',
+    role: 'Developer',
+    description: '음성 신호와 감정 단서를 활용해 사용자의 의사결정을 돕는 AI 도우미입니다.',
+    highlights: ['음성·감정 단서 기반 의사결정 보조', 'Kanana-o API 연동'],
+    stack: ['Flutter', 'Dart', 'Kanana-o API'],
+    links: { github: 'https://github.com/PlutoJoshua/amuguna' },
+  },
+];

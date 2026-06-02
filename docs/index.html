@@ -5,8 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="김소영 / PlutoJoshua - AI Product Builder portfolio" />
     <title>Kim Soyoung · PlutoJoshua</title>
-    <script type="module" crossorigin src="/assets/index-ChZNtFxu.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CyzqThF8.css">
+    <!-- FOUC 방지: React 마운트 전 테마 적용 -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <!-- SPA 딥링크 복원: 404.html 가 인코딩한 경로를 history 로 복원 -->
+    <script>
+      (function () {
+        var l = window.location;
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-CSanyZQU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CwZvKGFy.css">
   </head>
   <body>
     <div id="root"></div>
