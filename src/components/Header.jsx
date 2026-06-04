@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, Orbit, X } from 'lucide-react';
 import { profile } from '../data/profile';
 import ThemeToggle from './ThemeToggle';
 
@@ -22,8 +22,13 @@ export default function Header() {
 
   return (
     <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-      <NavLink to="/" className="font-semibold tracking-tight" onClick={() => setOpen(false)}>
-        {profile.name}
+      <NavLink
+        to="/"
+        aria-label={`${profile.name} home`}
+        className="inline-flex items-center gap-1 text-ink transition hover:text-accent dark:text-paper"
+        onClick={() => setOpen(false)}
+      >
+        <Orbit className="h-7 w-7" strokeWidth={1.75} />
         <span className="text-accent">.</span>
       </NavLink>
 

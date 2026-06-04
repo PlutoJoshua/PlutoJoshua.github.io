@@ -3,7 +3,7 @@ export const profile = {
   name: 'Kim Soyoung',
   handle: 'PlutoJoshua',
   role: 'AI Engineer · Product Builder',
-  badge: 'AI Engineer · Product Builder · PlutoJoshua',
+  badge: 'AI Engineer · Product Builder',
   headline: '외환, 금융, 매칭 문제를 AI 제품으로 풀어냅니다.',
   intro:
     '핀테크 스타트업에서 AI Engineer로 일하며 MCP, LangGraph, RAG, 금융 데이터를 연결해 실제 서비스 안에서 동작하는 AI 어시스턴트를 설계합니다. 반복 업무와 의사결정의 빈틈을 줄이는 제품을 만듭니다.',
