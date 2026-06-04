@@ -47,6 +47,7 @@ export const buildingNext = {
 // 헤더/hero의 외부 링크. icon은 문자열 key (렌더 컴포넌트에서 매핑).
 export const links = [
   { label: 'GitHub', href: 'https://github.com/PlutoJoshua', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/soyoung-kim-184960303', icon: 'Linkedin' },
   { label: 'Blog', href: 'https://from0lab.com', icon: 'Globe2' },
   { label: 'Contact', href: 'mailto:hello@example.com', icon: 'Mail', muted: true },
 ];

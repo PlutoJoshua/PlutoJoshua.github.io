@@ -6,9 +6,10 @@ import SectionLabel from '../components/SectionLabel';
 import Pill from '../components/Pill';
 import SkillCard from '../components/SkillCard';
 import GitHubMark from '../components/GitHubMark';
+import LinkedInMark from '../components/LinkedInMark';
 import profilePhoto from '../assets/profile.jpg';
 
-const LINK_ICONS = { github: GitHubMark, Globe2, Mail };
+const LINK_ICONS = { github: GitHubMark, Linkedin: LinkedInMark, Globe2, Mail };
 
 export default function About() {
   return (
