@@ -1,5 +1,5 @@
 // 학력/교육 이수 내역.
-// TODO: 실제 정보로 교체 — 아래는 구조 확인용 플레이스홀더.
+// TODO: 실제 정보로 교체 - 아래는 구조 확인용 플레이스홀더.
 export const education = [
   {
     id: 'university',

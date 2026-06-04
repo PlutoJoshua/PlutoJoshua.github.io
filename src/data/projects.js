@@ -1,8 +1,8 @@
 // 프로젝트 목록. group 으로 3단 섹션 분류:
-//   'featured'   — 메인 추천
-//   'opensource' — 오픈소스/협업
-//   'automation' — 자동화 실험
-// links: { github, demo } — 없으면 internal/private 표기.
+//   'featured'   - 메인 추천
+//   'opensource' - 오픈소스/협업
+//   'automation' - 자동화 실험
+// links: { github, demo } - 없으면 internal/private 표기.
 // private 한 레포는 caseStudy:true 로 두고 링크 대신 "Case study" 표기.
 export const projects = [
   // ───────── Featured ─────────
@@ -168,7 +168,7 @@ export const projects = [
     description:
       '캐릭터 웹툰 컷을 자동 생성하는 인스타그램 콘텐츠 파이프라인. 이미지는 그림만, 텍스트는 전부 분리해 Canva에서 합성합니다.',
     highlights: [
-      '이미지/텍스트 완전 분리 — 대사 수정 시 이미지 재생성 불필요',
+      '이미지/텍스트 완전 분리 - 대사 수정 시 이미지 재생성 불필요',
       '3중 텍스트 누수 방어 (프롬프트·Pydantic·OCR 가드)',
       'SDXL + IP-Adapter / LoRA 캐릭터 일관성',
       'LLM 스토리보드 → 이미지 → Canva Bulk Create XLSX',
@@ -187,7 +187,7 @@ export const projects = [
     description:
       'Markdown 글 하나를 명령어 한 줄로 WordPress 초안까지 발행하는 콘텐츠 파이프라인입니다. (from0lab.com 운영, 16+ 글)',
     highlights: [
-      'sha256 멱등 이미지 업로드 — 같은 이미지는 재업로드 안 함',
+      'sha256 멱등 이미지 업로드 - 같은 이미지는 재업로드 안 함',
       'term_exists 경쟁 조건 복구 · 지수 백오프 재시도',
       'draft-first 발행으로 오발행 차단',
       'frontmatter 파싱 + Markdown→HTML 변환',

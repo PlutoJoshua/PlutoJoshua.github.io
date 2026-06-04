@@ -9,7 +9,7 @@ export default function Projects() {
       <PageHeader
         label="Projects"
         title="AI Agent × Finance × Product."
-        subtitle="금융 AI 에이전트부터 제품 개발 에이전트, 자동화 파이프라인까지 — 동작하는 시스템으로 증명합니다."
+        subtitle="금융 AI 에이전트부터 제품 개발 에이전트, 자동화 파이프라인까지 - 동작하는 시스템으로 증명합니다."
       />
 
       <div className="space-y-20">

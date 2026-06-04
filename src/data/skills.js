@@ -1,4 +1,4 @@
-// 스킬 카드. icon은 문자열 key — SkillCard에서 lucide 컴포넌트로 매핑.
+// 스킬 카드. icon은 문자열 key - SkillCard에서 lucide 컴포넌트로 매핑.
 export const skills = [
   { title: 'LLM Agent', items: ['LangChain', 'LangGraph', 'MCP', 'RAG', 'Prompt Engineering'], icon: 'Bot' },
   { title: 'ML / Data', items: ['Python', 'PyTorch', 'TensorFlow', 'Pandas', 'NLP'], icon: 'BrainCircuit' },
