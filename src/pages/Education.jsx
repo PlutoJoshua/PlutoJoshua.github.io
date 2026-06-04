@@ -1,4 +1,5 @@
-import { education, certifications } from '../data/education';
+import { Award } from 'lucide-react';
+import { education, trainings, licenses } from '../data/education';
 import PageHeader from '../components/PageHeader';
 import EducationCard from '../components/EducationCard';
 import SectionLabel from '../components/SectionLabel';
@@ -14,14 +15,34 @@ export default function Education() {
         ))}
       </div>
 
-      {certifications?.length ? (
+      {trainings?.length ? (
         <div className="mt-16">
-          <SectionLabel>Certifications</SectionLabel>
+          <SectionLabel>Bootcamp</SectionLabel>
           <div className="grid gap-5 md:grid-cols-2">
-            {certifications.map((item) => (
+            {trainings.map((item) => (
               <EducationCard key={item.id} item={item} />
             ))}
           </div>
+        </div>
+      ) : null}
+
+      {licenses?.length ? (
+        <div className="mt-16">
+          <SectionLabel>Licenses & Certifications</SectionLabel>
+          <ul className="flex flex-wrap gap-3">
+            {licenses.map((lic) => (
+              <li
+                key={lic.name}
+                className="inline-flex items-center gap-2 rounded-2xl border border-ink/10 bg-white/70 px-4 py-3 text-sm font-semibold shadow-sm backdrop-blur dark:border-line-d dark:bg-paper-d/70"
+              >
+                <Award className="h-4 w-4 text-accent" />
+                {lic.name}
+                {lic.note ? (
+                  <span className="font-normal text-muted dark:text-muted-d">· {lic.note}</span>
+                ) : null}
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
     </section>

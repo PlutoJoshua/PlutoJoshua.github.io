@@ -31,6 +31,15 @@ export default {
       boxShadow: {
         soft: '0 24px 80px rgba(16, 16, 20, 0.10)',
       },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-4px) rotate(-6deg)' },
+        },
+      },
+      animation: {
+        float: 'float 3.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

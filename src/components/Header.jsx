@@ -28,7 +28,10 @@ export default function Header() {
         className="inline-flex items-center gap-1 text-ink transition hover:text-accent dark:text-paper"
         onClick={() => setOpen(false)}
       >
-        <Orbit className="h-7 w-7" strokeWidth={1.75} />
+        <Orbit
+          className="h-7 w-7 animate-float drop-shadow-[0_4px_10px_rgba(124,58,237,0.35)] motion-reduce:animate-none"
+          strokeWidth={1.75}
+        />
         <span className="text-accent">.</span>
       </NavLink>
 
