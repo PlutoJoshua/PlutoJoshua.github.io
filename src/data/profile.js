@@ -54,7 +54,7 @@ export const contact = {
   ],
   actions: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/soyoung-kim-184960303', icon: 'Linkedin', primary: true },
-    { label: 'Email', href: 'mailto:cuunit.store@gmail.com', icon: 'Mail' },
+    { label: 'Email', href: 'mailto:thdude37@gmail.com', icon: 'Mail' },
   ],
 };
 
@@ -63,5 +63,5 @@ export const links = [
   { label: 'GitHub', href: 'https://github.com/PlutoJoshua', icon: 'github' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/soyoung-kim-184960303', icon: 'Linkedin' },
   { label: 'Blog', href: 'https://from0lab.com', icon: 'Globe2' },
-  { label: 'Contact', href: 'mailto:hello@example.com', icon: 'Mail', muted: true },
+  { label: 'Contact', href: 'mailto:thdude37@gmail.com', icon: 'Mail', muted: true },
 ];
