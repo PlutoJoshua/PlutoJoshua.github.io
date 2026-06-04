@@ -6,14 +6,14 @@ export const profile = {
   badge: 'AI Engineer · Product Builder · PlutoJoshua',
   headline: '외환, 금융, 매칭 문제를 AI 제품으로 풀어냅니다.',
   intro:
-    'CuUnit에서 AI Engineer로 일하며 MCP, LangGraph, RAG, 금융 데이터를 연결해 실제 서비스 안에서 동작하는 AI 어시스턴트를 설계합니다. 반복 업무와 의사결정의 빈틈을 줄이는 제품을 만듭니다.',
+    '핀테크 스타트업에서 AI Engineer로 일하며 MCP, LangGraph, RAG, 금융 데이터를 연결해 실제 서비스 안에서 동작하는 AI 어시스턴트를 설계합니다. 반복 업무와 의사결정의 빈틈을 줄이는 제품을 만듭니다.',
   heroTags: ['LLM Agent', 'MCP', 'LangGraph', 'FinTech AI', 'Browser Automation', 'AI Matching'],
 };
 
 // 메인 hero 우측 "Currently" 카드.
 export const currently = {
   label: 'Currently',
-  title: 'CuUnit AI Engineer',
+  title: '핀테크 스타트업 AI Engineer',
   description:
     '환율 예측 AI 시스템, MCP + LangGraph 기반 AI 에이전트, AI 연구과제 수행과 성과관리를 함께 다룹니다.',
 };
