@@ -44,6 +44,20 @@ export const buildingNext = {
   cta: { label: 'Follow the build', href: 'https://github.com/PlutoJoshua' },
 };
 
+// About 맨 아래 "Let's talk" CTA 섹션.
+export const contact = {
+  label: "Let's talk",
+  heading: '함께 만들 문제가 있다면 편하게 연락 주세요.',
+  paragraphs: [
+    '새로운 문제와 협업 기회에 열려 있습니다. AI 에이전트, 금융 데이터, 자동화에 관한 이야기라면 더 반갑습니다.',
+    '커피챗도 언제든 환영합니다. LinkedIn이나 이메일로 편하게 연락 주세요.',
+  ],
+  actions: [
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/soyoung-kim-184960303', icon: 'Linkedin', primary: true },
+    { label: 'Email', href: 'mailto:cuunit.store@gmail.com', icon: 'Mail' },
+  ],
+};
+
 // 헤더/hero의 외부 링크. icon은 문자열 key (렌더 컴포넌트에서 매핑).
 export const links = [
   { label: 'GitHub', href: 'https://github.com/PlutoJoshua', icon: 'github' },

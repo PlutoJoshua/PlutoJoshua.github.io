@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Globe2, Mail, Rocket, Sparkles } from 'lucide-react';
-import { profile, currently, metrics, about, buildingNext, links } from '../data/profile';
+import { profile, currently, metrics, about, buildingNext, contact, links } from '../data/profile';
 import { skills } from '../data/skills';
 import SectionLabel from '../components/SectionLabel';
 import Pill from '../components/Pill';
@@ -135,6 +135,43 @@ export default function About() {
               >
                 {buildingNext.cta.label} <Rocket className="h-4 w-4" />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Let's talk */}
+      <section className="relative mx-auto max-w-7xl px-6 pb-20 pt-4 lg:px-8">
+        <div className="rounded-[2rem] border border-ink/10 bg-ink p-8 text-white shadow-soft dark:border-line-d dark:bg-paper-d lg:p-12">
+          <SectionLabel>{contact.label}</SectionLabel>
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h2 className="text-4xl font-black tracking-tight sm:text-5xl">{contact.heading}</h2>
+              <div className="mt-6 space-y-4 text-lg leading-8 text-white/70">
+                {contact.paragraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-3 lg:justify-end">
+              {contact.actions.map(({ label, href, icon, primary }) => {
+                const Icon = LINK_ICONS[icon] || Mail;
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                    className={`inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition ${
+                      primary
+                        ? 'bg-accent text-white hover:-translate-y-0.5'
+                        : 'border border-white/20 text-white/80 hover:text-white'
+                    }`}
+                  >
+                    <Icon className="h-4 w-4" /> {label}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
