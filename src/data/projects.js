@@ -147,7 +147,7 @@ export const projects = [
     links: { github: 'https://github.com/PlutoJoshua/NewsScrap' },
   },
   {
-    name: 'CuUnit AI 챗봇',
+    name: '사내 AI 챗봇',
     category: 'AI · FinTech',
     status: '진행중',
     group: 'automation',
@@ -157,6 +157,43 @@ export const projects = [
     highlights: ['외환 조회·분석·안내 흐름 자동화', 'LangGraph 상태 기반 멀티스텝 대화'],
     stack: ['MCP', 'LangGraph', 'Python', 'FX Data'],
     links: {},
+  },
+  {
+    name: 'instatoon Pipeline',
+    category: 'Generative · Content',
+    status: '진행중',
+    group: 'automation',
+    year: '2025',
+    role: 'Creator',
+    description:
+      '캐릭터 웹툰 컷을 자동 생성하는 인스타그램 콘텐츠 파이프라인. 이미지는 그림만, 텍스트는 전부 분리해 Canva에서 합성합니다.',
+    highlights: [
+      '이미지/텍스트 완전 분리 — 대사 수정 시 이미지 재생성 불필요',
+      '3중 텍스트 누수 방어 (프롬프트·Pydantic·OCR 가드)',
+      'SDXL + IP-Adapter / LoRA 캐릭터 일관성',
+      'LLM 스토리보드 → 이미지 → Canva Bulk Create XLSX',
+    ],
+    stack: ['Python', 'SDXL', 'diffusers', 'Ollama', 'EasyOCR'],
+    links: {},
+    caseStudy: true,
+  },
+  {
+    name: 'project-velocity',
+    category: 'Automation · Content',
+    status: '운영중',
+    group: 'automation',
+    year: '2024 –',
+    role: 'Creator',
+    description:
+      'Markdown 글 하나를 명령어 한 줄로 WordPress 초안까지 발행하는 콘텐츠 파이프라인입니다. (from0lab.com 운영, 16+ 글)',
+    highlights: [
+      'sha256 멱등 이미지 업로드 — 같은 이미지는 재업로드 안 함',
+      'term_exists 경쟁 조건 복구 · 지수 백오프 재시도',
+      'draft-first 발행으로 오발행 차단',
+      'frontmatter 파싱 + Markdown→HTML 변환',
+    ],
+    stack: ['Python', 'WordPress REST API', 'requests', 'pydantic-settings'],
+    links: { demo: 'https://from0lab.com' },
   },
 ];
 
