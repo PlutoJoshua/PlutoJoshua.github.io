@@ -5,7 +5,7 @@ export const career = [
   {
     id: 'cuunit',
     group: 'tech',
-    company: 'CuUnit',
+    company: 'CUUNIT',
     role: 'AI Engineer',
     period: { start: '2025.02', end: '현재' },
     location: 'Seoul, KR',
