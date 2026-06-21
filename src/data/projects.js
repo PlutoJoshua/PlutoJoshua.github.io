@@ -7,6 +7,25 @@
 export const projects = [
   // ───────── Featured ─────────
   {
+    name: 'Quantisight AI Finance Agent',
+    category: 'Financial Analysis · AI Agent',
+    status: '운영중',
+    group: 'featured',
+    year: '2026',
+    role: 'Development Lead · Backend Architect',
+    description:
+      'Quantisight의 자연어 금융 분석 요청을 데이터 수집, 분석 코드 실행, 차트 생성, 결과 검증까지 연결하는 LangGraph 기반 멀티 에이전트 백엔드입니다.',
+    highlights: [
+      '개발 리더로 4-agent 금융 분석 워크플로우와 MessageBus 기반 LangGraph 아키텍처 설계·구현',
+      '국내외 금융 데이터 도구 10종+ 연동으로 자연어 기반 주식·거시경제 분석 커버리지 확장',
+      'E2B 샌드박스 + Redis/arq Worker Queue + API 폴백으로 안전한 코드 실행과 데이터 수집 안정성 확보',
+    ],
+    stack: ['LangGraph', 'FastAPI', 'Redis', 'E2B', 'Cloudflare'],
+    links: {},
+    caseStudy: true,
+    org: 'Quantisight',
+  },
+  {
     name: 'Hedge Decision Engine',
     category: 'AI · Finance',
     status: '진행중',
@@ -243,7 +262,8 @@ export const projectGroups = [
     key: 'featured',
     label: 'Featured Projects',
     title: 'AI가 실제로 일하게 만드는 프로젝트들.',
-    description: '금융 AI 에이전트, 제품 개발 에이전트, 멀티모달 소비자 앱까지. 데모를 넘어 동작하는 시스템을 만듭니다.',
+    description:
+      '금융 분석 에이전트, 환율 예측 엔진, 제품 개발 에이전트, 멀티모달 소비자 앱까지. 데모를 넘어 동작하는 시스템을 만듭니다.',
   },
   {
     key: 'opensource',
