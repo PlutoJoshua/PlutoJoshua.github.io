@@ -152,7 +152,7 @@ export const projects = [
 
   // ───────── Automation Experiments ─────────
   {
-    name: 'CUUNIT AI News',
+    name: '사내 AI 뉴스 자동화',
     category: 'AI Automation · Finance',
     status: '운영중',
     group: 'automation',
@@ -185,7 +185,7 @@ export const projects = [
     links: { github: 'https://github.com/PlutoJoshua/NewsScrap' },
   },
   {
-    name: 'CUUNIT AI Agent',
+    name: '사내 AI 어시스턴트',
     category: 'AI · FinTech',
     status: '진행중',
     group: 'automation',
@@ -265,8 +265,8 @@ export const projectOrder = {
     'FinOrbit',
   ],
   automation: [
-    'CUUNIT AI Agent',
-    'CUUNIT AI News',
+    '사내 AI 어시스턴트',
+    '사내 AI 뉴스 자동화',
     'STT & Summarization Tool',
     'WordPress Publishing Automation',
     'instatoon Pipeline',
