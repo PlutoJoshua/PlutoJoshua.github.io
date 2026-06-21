@@ -94,6 +94,15 @@ export const projects = [
     ],
     stack: ['Flutter', 'Dart', 'Kanana-o API', 'Riverpod', 'SSE'],
     links: { github: 'https://github.com/PlutoJoshua/amuguna' },
+    media: {
+      device: 'phone',
+      shots: [
+        '/projects/amuguna/home-light.png',
+        '/projects/amuguna/chat-voice-light.png',
+        '/projects/amuguna/menu-result-light.png',
+        '/projects/amuguna/decision-card-light.png',
+      ],
+    },
   },
 
   // ───────── Open Source / Collaboration ─────────

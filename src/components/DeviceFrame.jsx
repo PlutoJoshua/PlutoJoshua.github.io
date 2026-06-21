@@ -2,11 +2,11 @@
 // device: 'browser'(데스크탑/웹) | 'phone'(모바일)
 export default function DeviceFrame({ device = 'browser', src, alt, label }) {
   if (device === 'phone') {
+    // 스크린샷에 이미 상태바/노치가 포함되어 있어 베젤만 둔다.
     return (
-      <div className="mx-auto w-full max-w-[280px]">
-        <div className="relative rounded-[2.5rem] border-[10px] border-ink bg-ink shadow-soft dark:border-black dark:bg-black">
-          <div className="absolute left-1/2 top-2 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-ink dark:bg-black" />
-          <img src={src} alt={alt} className="block w-full rounded-[1.8rem] object-cover" loading="lazy" />
+      <div className="mx-auto w-full max-w-[260px]">
+        <div className="overflow-hidden rounded-[2.5rem] border-[10px] border-ink bg-ink shadow-soft dark:border-black dark:bg-black">
+          <img src={src} alt={alt} className="block w-full rounded-[1.6rem] object-cover" loading="lazy" />
         </div>
       </div>
     );
