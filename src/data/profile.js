@@ -3,10 +3,10 @@ export const profile = {
   name: 'Kim Soyoung',
   handle: 'PlutoJoshua',
   role: 'AI Engineer · Product Builder',
-  badge: 'AI Engineer · Product Builder',
+  badge: 'AI Engineer building agents and automation for finance operations',
   headline: '반복되는 금융·운영 업무를 AI 제품으로 바꿉니다.',
   intro:
-    'AI Engineer building agents and automation for finance operations. 핀테크 스타트업에서 LangGraph, RAG, Text-to-SQL, 자동화 파이프라인을 설계하고 실제 서비스에 연결합니다. CS 응대, 금융 뉴스 발행, 회의록 작성, 환율 예측처럼 반복되거나 판단이 필요한 업무를 줄이는 AI 시스템을 만듭니다.',
+    '핀테크 스타트업에서 LangGraph, RAG, Text-to-SQL, 자동화 파이프라인을 설계하고 실제 서비스에 연결합니다. CS 응대, 금융 뉴스 발행, 회의록 작성, 환율 예측처럼 반복되거나 판단이 필요한 업무를 줄이는 AI 시스템을 만듭니다.',
   heroTags: ['LLM Agent', 'LangGraph', 'RAG', 'Text-to-SQL', 'FinTech AI', 'Workflow Automation'],
 };
 
@@ -15,14 +15,14 @@ export const currently = {
   label: 'Currently',
   title: '핀테크 스타트업 AI Engineer',
   description:
-    '금융 서비스 안에서 LangGraph 기반 AI 에이전트, RAG CS 자동화, 금융 뉴스 발행 파이프라인, STT 회의 요약, 환율 예측 모델을 설계·개발합니다.',
+    '금융 서비스 안에서 LangGraph 기반 AI 에이전트, RAG CS 자동화, 금융 뉴스 발행 파이프라인, STT 회의 요약, WordPress 자동 발행, 환율 예측 모델을 설계·개발합니다.',
 };
 
 export const metrics = [
   ['10+', 'AI / automation projects'],
   ['300+', 'AI news operation days'],
   ['20%', 'CS workload reduced'],
-  ['100+', 'Meetings summarized'],
+  ['3min', 'WordPress draft publish'],
 ];
 
 // About 페이지 본문.

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Globe2, Mail, Rocket, Sparkles } from 'lucide-react';
-import { profile, currently, metrics, about, buildingNext, contact, links } from '../data/profile';
+import { ArrowUpRight, Globe2, Mail, Sparkles } from 'lucide-react';
+import { profile, currently, metrics, about, contact, links } from '../data/profile';
 import { skills } from '../data/skills';
 import SectionLabel from '../components/SectionLabel';
 import Pill from '../components/Pill';
@@ -31,8 +31,8 @@ export default function About() {
               <p className="text-sm text-muted dark:text-muted-d">{profile.role}</p>
             </div>
           </div>
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur dark:border-line-d dark:bg-paper-d/70 dark:text-muted-d">
-            <Sparkles className="h-4 w-4 text-accent" />
+          <div className="mb-8 inline-flex max-w-full items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-2 text-sm text-muted shadow-sm backdrop-blur dark:border-line-d dark:bg-paper-d/70 dark:text-muted-d">
+            <Sparkles className="h-4 w-4 shrink-0 text-accent" />
             {profile.badge}
           </div>
           <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
@@ -116,27 +116,6 @@ export default function About() {
           <Link to="/projects" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
             모든 프로젝트 보기 <ArrowUpRight className="h-4 w-4" />
           </Link>
-        </div>
-      </section>
-
-      {/* Building next */}
-      <section className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
-        <div className="rounded-[2rem] border border-ink/10 bg-white/80 p-8 shadow-soft backdrop-blur dark:border-line-d dark:bg-paper-d/80 lg:p-12">
-          <SectionLabel>What I’m Building Next</SectionLabel>
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <h2 className="text-4xl font-black tracking-tight sm:text-5xl">{buildingNext.heading}</h2>
-            <div className="space-y-5 text-lg leading-8 text-muted dark:text-muted-d">
-              {buildingNext.paragraphs.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-              <a
-                href={buildingNext.cta.href}
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-bold text-white hover:bg-ink dark:hover:bg-paper dark:hover:text-ink"
-              >
-                {buildingNext.cta.label} <Rocket className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
         </div>
       </section>
 
