@@ -18,18 +18,19 @@ export default function EducationCard({ item }) {
           </p>
           {note ? <p className="mt-3 text-sm leading-6 text-muted dark:text-muted-d">{note}</p> : null}
           {thesis ? (
-            <a
-              href={thesis.url}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 block rounded-2xl border border-ink/10 bg-paper/70 p-4 text-sm transition hover:border-accent/40 dark:border-line-d dark:bg-ink-d/50"
-            >
-              <span className="flex items-center gap-2 font-semibold text-ink dark:text-paper">
-                Thesis <ExternalLink className="h-3.5 w-3.5 text-accent" />
-              </span>
-              <span className="mt-2 block leading-6 text-muted dark:text-muted-d">{thesis.title}</span>
-              <span className="mt-1 block leading-6 text-muted dark:text-muted-d">{thesis.subtitle}</span>
-            </a>
+            <p className="mt-3 text-sm leading-6 text-muted dark:text-muted-d">
+              Thesis:{' '}
+              <a
+                href={thesis.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-ink hover:text-accent dark:text-paper"
+              >
+                {thesis.title}
+                <ExternalLink className="h-3.5 w-3.5 text-accent" />
+              </a>
+              <span className="block text-muted dark:text-muted-d">{thesis.subtitle}</span>
+            </p>
           ) : null}
         </div>
       </div>

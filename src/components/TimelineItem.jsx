@@ -21,7 +21,7 @@ function formatDuration(startValue, endValue) {
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
-  if (years && months) return `${years}y ${months}m`;
+  if (years && months) return `${years}Y ${months}M`;
   if (years) return `${years}Y`;
   return `${months}M`;
 }

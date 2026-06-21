@@ -4,7 +4,7 @@ export const profile = {
   handle: 'PlutoJoshua',
   role: 'AI Engineer · Product Builder',
   badge: 'AI Engineer building agents and automation for finance operations',
-  headline: '반복되는 금융·운영 업무를 AI 제품으로 바꿉니다.',
+  headline: '업무의 맥락과 데이터를 연결하여 AI가 실제로 일하는 제품을 설계하고 구현합니다.',
   intro:
     '핀테크 스타트업에서 LangGraph, RAG, Text-to-SQL, 자동화 파이프라인을 설계하고 실제 서비스에 연결합니다. CS 응대, 금융 뉴스 발행, 회의록 작성, 환율 예측처럼 반복되거나 판단이 필요한 업무를 줄이는 AI 시스템을 만듭니다.',
   heroTags: ['LLM Agent', 'LangGraph', 'RAG', 'Text-to-SQL', 'FinTech AI', 'Workflow Automation'],
