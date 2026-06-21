@@ -2,14 +2,27 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Globe2, Mail, Sparkles } from 'lucide-react';
 import { profile, currently, metrics, about, contact, links } from '../data/profile';
 import { skills } from '../data/skills';
+import { projects, projectOrder } from '../data/projects';
 import SectionLabel from '../components/SectionLabel';
 import Pill from '../components/Pill';
 import SkillCard from '../components/SkillCard';
+import ProjectCard from '../components/ProjectCard';
 import GitHubMark from '../components/GitHubMark';
 import LinkedInMark from '../components/LinkedInMark';
 import profilePhoto from '../assets/profile.jpg';
 
 const LINK_ICONS = { github: GitHubMark, Linkedin: LinkedInMark, Globe2, Mail };
+
+// 홈에 노출할 대표 프로젝트 3개 (Projects 페이지의 featured 정렬을 따라감).
+const featuredOrder = projectOrder.featured || [];
+const featuredPreview = projects
+  .filter((p) => p.group === 'featured')
+  .sort((a, b) => {
+    const ai = featuredOrder.indexOf(a.name);
+    const bi = featuredOrder.indexOf(b.name);
+    return (ai === -1 ? Infinity : ai) - (bi === -1 ? Infinity : bi);
+  })
+  .slice(0, 3);
 
 export default function About() {
   return (
@@ -35,7 +48,7 @@ export default function About() {
             <Sparkles className="h-4 w-4 shrink-0 text-accent" />
             {profile.badge}
           </div>
-          <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-3xl text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
             {profile.headline}
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted dark:text-muted-d sm:text-xl">
@@ -66,7 +79,7 @@ export default function About() {
           </div>
         </div>
 
-        <aside className="rounded-[2rem] border border-ink/10 bg-white/70 p-6 shadow-soft backdrop-blur dark:border-line-d dark:bg-paper-d/70">
+        <aside className="rounded-[2rem] border border-ink/10 bg-white/70 p-6 shadow-soft backdrop-blur dark:border-line-d dark:bg-paper-d/70 lg:self-start">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-muted dark:text-muted-d">
             {currently.label}
           </p>
@@ -116,6 +129,11 @@ export default function About() {
           <Link to="/projects" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
             모든 프로젝트 보기 <ArrowUpRight className="h-4 w-4" />
           </Link>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {featuredPreview.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
         </div>
       </section>
 
