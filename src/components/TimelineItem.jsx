@@ -22,8 +22,8 @@ function formatDuration(startValue, endValue) {
   const months = totalMonths % 12;
 
   if (years && months) return `${years}y ${months}m`;
-  if (years) return `${years}y`;
-  return `${months}m`;
+  if (years) return `${years}Y`;
+  return `${months}M`;
 }
 
 // Career 타임라인 한 항목. 왼쪽 세로선 + dot 구조.
