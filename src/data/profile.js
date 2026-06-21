@@ -4,10 +4,10 @@ export const profile = {
   handle: 'PlutoJoshua',
   role: 'AI Engineer · Product Builder',
   badge: 'AI Engineer · Product Builder',
-  headline: '외환, 금융, 매칭 문제를 AI 제품으로 풀어냅니다.',
+  headline: '반복되는 금융·운영 업무를 AI 제품으로 바꿉니다.',
   intro:
-    '핀테크 스타트업에서 AI Engineer로 일하며 MCP, LangGraph, RAG, 금융 데이터를 연결해 실제 서비스 안에서 동작하는 AI 어시스턴트를 설계합니다. 반복 업무와 의사결정의 빈틈을 줄이는 제품을 만듭니다.',
-  heroTags: ['LLM Agent', 'MCP', 'LangGraph', 'FinTech AI', 'Browser Automation', 'AI Matching'],
+    'AI Engineer building agents and automation for finance operations. 핀테크 스타트업에서 LangGraph, RAG, Text-to-SQL, 자동화 파이프라인을 설계하고 실제 서비스에 연결합니다. CS 응대, 금융 뉴스 발행, 회의록 작성, 환율 예측처럼 반복되거나 판단이 필요한 업무를 줄이는 AI 시스템을 만듭니다.',
+  heroTags: ['LLM Agent', 'LangGraph', 'RAG', 'Text-to-SQL', 'FinTech AI', 'Workflow Automation'],
 };
 
 // 메인 hero 우측 "Currently" 카드.
@@ -15,22 +15,22 @@ export const currently = {
   label: 'Currently',
   title: '핀테크 스타트업 AI Engineer',
   description:
-    '환율 예측 AI 시스템, MCP + LangGraph 기반 AI 에이전트, AI 연구과제 수행과 성과관리를 함께 다룹니다.',
+    '금융 서비스 안에서 LangGraph 기반 AI 에이전트, RAG CS 자동화, 금융 뉴스 발행 파이프라인, STT 회의 요약, 환율 예측 모델을 설계·개발합니다.',
 };
 
 export const metrics = [
-  ['6+', 'AI / Data projects'],
-  ['4y+', 'Operations & public-sector programs'],
-  ['140+', 'Companies served in education ops'],
-  ['150+', 'SME consulting projects supported'],
+  ['10+', 'AI / automation projects'],
+  ['300+', 'AI news operation days'],
+  ['20%', 'CS workload reduced'],
+  ['100+', 'Meetings summarized'],
 ];
 
 // About 페이지 본문.
 export const about = {
-  heading: '모르는 것을 빠르게 배우고, 동작하는 형태로 증명합니다.',
+  heading: 'AI를 탐구하고, 실제 업무에 붙여 동작하게 만듭니다.',
   paragraphs: [
-    '데이터 분석과 LLM 개발 경험 위에 금융 도메인, 운영 경험, 제품 구현을 연결하고 있습니다.',
-    '관심사는 단순한 데모가 아니라 사용자의 요청, 데이터, 의사결정, 실행까지 이어지는 AI 시스템입니다. 특히 외환/금융, 매칭 서비스, 브라우저 자동화, 워크플로 자동화 문제를 좋아합니다.',
+    '저는 모델을 호출하는 데서 끝나는 기능보다, 사용자의 요청을 이해하고 내부 데이터와 도구를 연결해 실제 실행까지 이어지는 AI 시스템에 관심이 많습니다.',
+    'LangGraph 에이전트, RAG, Text-to-SQL, STT, 브라우저 자동화처럼 업무 흐름 안에 들어가는 기술을 설계하고 구현합니다. 좋은 AI 제품은 멋진 응답보다 사람이 반복 업무에서 벗어나 더 중요한 판단을 하게 만드는 시스템이라고 생각합니다.',
   ],
 };
 
