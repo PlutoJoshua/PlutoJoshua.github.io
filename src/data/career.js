@@ -22,7 +22,7 @@ export const career = [
     id: 'chunjae',
     group: 'tech',
     company: '(주)천재교육',
-    role: '디지털러닝팀, Spetialist',
+    role: '디지털러닝팀, Specialist',
     period: { start: '2024.09', end: '2024.12' },
     location: 'Seoul, KR',
     summary: '교육 데이터 분석과 LLM 기반 챗봇 개발, 의사결정 자료 제작을 담당했습니다.',
