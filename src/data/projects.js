@@ -13,13 +13,14 @@ export const projects = [
     group: 'featured',
     year: '2024 –',
     role: 'ML Engineer',
-    description: 'USD/KRW 환율 방향을 예측하고 환헤지 의사결정을 돕는 금융 AI 엔진입니다.',
+    description:
+      '하나은행 공식 고시 환율 10년치와 매크로·크로스레이트 데이터를 결합해 USD/KRW 방향 예측 및 환헤지 의사결정 시그널을 실험하는 금융 AI 엔진입니다.',
     highlights: [
-      '10년 환율 데이터 + 매크로·크로스레이트 피처 엔지니어링',
-      'TFT·N-BEATS·CRNN 앙상블로 방향성 예측',
-      '환헤지 의사결정 시그널 산출',
+      '하나은행 공식 고시 환율 10년치 수집: 2,810일 · 289K quotes · 123,949개 15분봉 OHLC',
+      'FRED·BOK ECOS·Polygon 기반 매크로/크로스레이트 포함 147개 피처 구축',
+      '7종 서브모델 앙상블 + LightGBM MetaLearner로 4h honest holdout accuracy 67.75%, F1 71.05% 달성',
     ],
-    stack: ['Python', 'TFT', 'N-BEATS', 'CRNN'],
+    stack: ['Python', 'PyTorch', 'LightGBM', 'Vertex AI'],
     links: {},
     caseStudy: true,
   },
@@ -30,13 +31,14 @@ export const projects = [
     group: 'featured',
     year: '2024 –',
     role: 'AI Engineer',
-    description: 'Planner·Trader·Risk Manager 에이전트가 협업하는 금융 멀티 에이전트 트레이딩 시스템입니다.',
+    description:
+      'TradingView 신호를 LangGraph 멀티 에이전트가 해석하고, ML 최적화 파라미터를 Pine Script에 자동 전달하는 AI 트레이딩 파이프라인입니다.',
     highlights: [
-      'LangGraph 기반 Planner / Trader / Risk Manager 구조',
-      'FastAPI 백엔드로 에이전트 오케스트레이션',
-      '리스크 통제와 의사결정 흐름 분리',
+      'Planner·Risk Gate·Trader 에이전트로 신호 분석, 리스크 검증, 주문 생성을 단계별 분리',
+      'FINORBIT:SYMBOL_PARAMETER Virtual Ticker API로 TradingView request.security() 연동',
+      'ML 기반 RSI·BB·진입 임계값 동적 최적화 + HMAC 웹훅 검증·이벤트 소싱 기록',
     ],
-    stack: ['FastAPI', 'LangGraph', 'Python'],
+    stack: ['FastAPI', 'LangGraph', 'OpenAI GPT-4', 'Pine Script', 'Docker'],
     links: {},
     caseStudy: true,
   },
@@ -48,13 +50,13 @@ export const projects = [
     year: '2024',
     role: 'Creator',
     description:
-      '아이디어 → 기획 → 디자인 → 개발 → 배포까지 이어지는 멀티 에이전트 제품 개발 파이프라인입니다.',
+      '아이디어 입력만으로 AI 팀이 기획, 디자인, 개발, 배포 산출물과 실행 가능한 앱 코드를 생성하는 멀티 에이전트 제품 개발 파이프라인입니다.',
     highlights: [
-      '기획·설계·구현 에이전트 파이프라인',
-      'Google ADK + LiteLLM 멀티 LLM 오케스트레이션',
-      'Human-in-the-loop 검수 단계',
+      'Google ADK 기반 5단계 파이프라인 + 4-에이전트 코드 생성팀 설계',
+      '각 단계 승인/거절/수정요청, 롤백, 산출물 버전 관리로 Human-in-the-loop 구현',
+      'WebSocket 로그 스트리밍, 토큰 비용 대시보드, 생성 앱 실행·ZIP 다운로드 지원',
     ],
-    stack: ['FastAPI', 'Next.js', 'Google ADK', 'LiteLLM'],
+    stack: ['Google ADK', 'FastAPI', 'Next.js', 'PostgreSQL', 'Redis'],
     links: { github: 'https://github.com/PlutoJoshua/Builder' },
   },
   {
@@ -65,13 +67,13 @@ export const projects = [
     year: '2024',
     role: 'Developer · Kakao AI Ambassador',
     description:
-      '음성 톤에서 숨은 선호를 읽어 "아무거나"라는 말 뒤의 진짜 의도를 찾아주는 멀티모달 의사결정 도우미입니다.',
+      'Kanana-o 멀티모달 AI로 음성 톤과 메뉴판 이미지를 함께 해석해 "아무거나" 뒤의 숨은 선호를 찾아주는 Flutter 의사결정 앱입니다.',
     highlights: [
-      'Kanana-o 1.5 멀티모달 모델로 감정·의도 분석',
-      '대화 기반(Mode A) + 메뉴 사진 분석(Mode B)',
-      'Flutter 크로스플랫폼 (iOS · Android · macOS)',
+      'Mode A 음성 대화 + Mode B 메뉴판 Vision 분석으로 음식 선택 흐름 구현',
+      '멀티턴 대화, 거부 메뉴 회피, 결정 유형 카드 4종, confetti 연출까지 MVP 완성',
+      'BYO-key 라우팅 가드, SSE 스트리밍 파서, 디버그 로그 화면으로 공개 실행 가능성 확보',
     ],
-    stack: ['Flutter', 'Dart', 'Kanana-o API', 'Riverpod'],
+    stack: ['Flutter', 'Dart', 'Kanana-o API', 'Riverpod', 'SSE'],
     links: { github: 'https://github.com/PlutoJoshua/amuguna' },
   },
 
@@ -131,6 +133,23 @@ export const projects = [
 
   // ───────── Automation Experiments ─────────
   {
+    name: 'CUUNIT AI News',
+    category: 'AI Automation · Finance',
+    status: '운영중',
+    group: 'automation',
+    year: '2025 –',
+    role: 'AI Engineer',
+    description:
+      '금융 뉴스 수집, LLM 요약, 이미지 검색/생성, 블로그 포스팅까지 자동화해 회사 앱에 노출되는 금융 콘텐츠 파이프라인입니다.',
+    highlights: [
+      '2025년 6월 23일부터 300+일 운영, 현재는 주말 제외 daily 금융 뉴스 콘텐츠로 앱 노출',
+      '뉴스 크롤링 → LLM 요약 → 이미지 검색/생성 → 네이버 블로그 업로드 → Slack 알림까지 end-to-end 자동화',
+      'LLM·이미지 API 실패 시 대체 모델과 스톡 이미지 폴백으로 중단 없는 운영 흐름 설계',
+    ],
+    stack: ['Python', 'LangChain', 'Docker', 'Selenium', 'FastAPI'],
+    links: {},
+  },
+  {
     name: 'NewsScrap',
     category: 'Automation Pipeline',
     status: '완료',
@@ -147,15 +166,20 @@ export const projects = [
     links: { github: 'https://github.com/PlutoJoshua/NewsScrap' },
   },
   {
-    name: '사내 AI 챗봇',
+    name: 'CUUNIT AI Agent',
     category: 'AI · FinTech',
     status: '진행중',
     group: 'automation',
     year: '2024 –',
     role: 'AI Engineer',
-    description: 'MCP와 LangGraph로 외환 서비스의 조회·분석·안내 흐름을 자동화하는 사내 AI 어시스턴트입니다.',
-    highlights: ['외환 조회·분석·안내 흐름 자동화', 'LangGraph 상태 기반 멀티스텝 대화'],
-    stack: ['MCP', 'LangGraph', 'Python', 'FX Data'],
+    description:
+      'LangGraph 기반 라우팅 에이전트가 고객 CS, 내부 DB 검색, 업무 함수 실행을 분기 처리하는 사내 AI 어시스턴트입니다.',
+    highlights: [
+      'FAQ/RAG 기반 고객 CS 자동 응답과 문의 분류로 CS 관리 업무 20% 감소',
+      '자연어 질의를 Text-to-SQL로 변환해 AWS RDS MySQL 검색 후 결과를 요약',
+      'FastAPI REST/WebSocket, WAS 연동, FAISS 벡터 검색, AWS Secrets Manager 기반 배포 구성',
+    ],
+    stack: ['Python', 'LangGraph', 'FastAPI', 'FAISS', 'AWS'],
     links: {},
   },
   {
@@ -178,21 +202,20 @@ export const projects = [
     caseStudy: true,
   },
   {
-    name: 'project-velocity',
-    category: 'Automation · Content',
+    name: 'WordPress Publishing Automation',
+    category: 'Blog Ops · Automation',
     status: '운영중',
     group: 'automation',
-    year: '2024 –',
+    year: '2026 –',
     role: 'Creator',
     description:
-      'Markdown 글 하나를 명령어 한 줄로 WordPress 초안까지 발행하는 콘텐츠 파이프라인입니다. (from0lab.com 운영, 16+ 글)',
+      '직접 운영하는 from0lab.com 블로그의 원고, 실험 코드, 운영 문서를 관리하고 Markdown 글을 WordPress 초안으로 자동 발행하는 블로그 운영 파이프라인입니다.',
     highlights: [
-      'sha256 멱등 이미지 업로드 - 같은 이미지는 재업로드 안 함',
-      'term_exists 경쟁 조건 복구 · 지수 백오프 재시도',
-      'draft-first 발행으로 오발행 차단',
-      'frontmatter 파싱 + Markdown→HTML 변환',
+      '2026년부터 주 2회 발행 루틴 운영, 약 26개 글과 실험 코드·차트 함께 관리',
+      'Markdown → WordPress 초안 발행 시간을 약 1시간에서 3분으로 단축',
+      '이미지 중복 업로드 방지, 카테고리/태그 자동 해석, HTML 변환, draft-first 검수 흐름 구현',
     ],
-    stack: ['Python', 'WordPress REST API', 'requests', 'pydantic-settings'],
+    stack: ['Python', 'WordPress REST API', 'Markdown', 'pydantic-settings'],
     links: { demo: 'https://from0lab.com' },
   },
 ];
