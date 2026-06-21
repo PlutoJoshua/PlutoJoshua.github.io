@@ -1,6 +1,35 @@
+function parseMonth(value) {
+  if (!value || value === '현재') return null;
+  const [year, month] = value.split('.').map(Number);
+  if (!year || !month) return null;
+  return { year, month };
+}
+
+function currentMonth() {
+  const now = new Date();
+  return { year: now.getFullYear(), month: now.getMonth() + 1 };
+}
+
+function formatDuration(startValue, endValue) {
+  const start = parseMonth(startValue);
+  const end = endValue === '현재' ? currentMonth() : parseMonth(endValue);
+  if (!start || !end) return null;
+
+  const startIndex = start.year * 12 + start.month;
+  const endIndex = end.year * 12 + end.month;
+  const totalMonths = Math.max(1, endIndex - startIndex + 1);
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  if (years && months) return `${years}y ${months}m`;
+  if (years) return `${years}y`;
+  return `${months}m`;
+}
+
 // Career 타임라인 한 항목. 왼쪽 세로선 + dot 구조.
 export default function TimelineItem({ item }) {
   const { company, role, period, location, summary, highlights, stack, current } = item;
+  const duration = formatDuration(period.start, period.end);
   return (
     <li className="relative pl-10">
       {/* 세로선 */}
@@ -22,6 +51,7 @@ export default function TimelineItem({ item }) {
         <p className="mt-1 font-semibold text-accent">{company}</p>
         <p className="mt-1 text-sm text-muted dark:text-muted-d">
           {period.start} – {period.end}
+          {duration ? ` · ${duration}` : ''}
           {location ? ` · ${location}` : ''}
         </p>
         {summary ? <p className="mt-4 leading-7 text-muted dark:text-muted-d">{summary}</p> : null}

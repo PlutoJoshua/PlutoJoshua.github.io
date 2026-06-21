@@ -256,6 +256,24 @@ export const projects = [
   },
 ];
 
+export const projectOrder = {
+  featured: [
+    'Hedge Decision Engine',
+    'Quantisight AI Finance Agent',
+    'Builder',
+    'amuguna',
+    'FinOrbit',
+  ],
+  automation: [
+    'CUUNIT AI Agent',
+    'CUUNIT AI News',
+    'STT & Summarization Tool',
+    'WordPress Publishing Automation',
+    'instatoon Pipeline',
+    'NewsScrap',
+  ],
+};
+
 // 섹션 메타. Projects 페이지에서 group 별로 묶어 렌더.
 export const projectGroups = [
   {

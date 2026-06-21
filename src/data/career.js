@@ -42,7 +42,7 @@ export const career = [
     role: '교육사업팀',
     period: { start: '2019.01', end: '2023.01' },
     location: 'Seoul, KR',
-    summary: '온라인 교육과 LMS 운영, 대규모 과정 운영과 민원 응대를 담당했습니다. (4년)',
+    summary: '온라인 교육과 LMS 운영, 대규모 과정 운영과 민원 응대를 담당했습니다.',
     highlights: [
       '온라인 교육 운영 · LMS 운영',
       '연 140개사 · 40개 과정 운영',
@@ -58,7 +58,7 @@ export const career = [
     role: '기술지도실',
     period: { start: '2014.10', end: '2018.08' },
     location: 'Korea',
-    summary: '정부사업 행정과 스마트공장사업을 운영하며 중소기업 설비·컨설팅을 지원했습니다. (4년)',
+    summary: '정부사업 행정과 스마트공장사업을 운영하며 중소기업 설비·컨설팅을 지원했습니다.',
     highlights: [
       '정부사업 행정 · 스마트공장사업 운영',
       '연 150개 중소기업 설비 / 컨설팅 지원',

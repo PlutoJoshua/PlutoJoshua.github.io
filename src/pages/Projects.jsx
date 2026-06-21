@@ -1,9 +1,21 @@
-import { projects, projectGroups } from '../data/projects';
+import { projects, projectGroups, projectOrder } from '../data/projects';
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import SectionLabel from '../components/SectionLabel';
 
 export default function Projects() {
+  function sortByDisplayOrder(items, groupKey) {
+    const order = projectOrder[groupKey];
+    if (!order) return items;
+    return [...items].sort((a, b) => {
+      const aIndex = order.indexOf(a.name);
+      const bIndex = order.indexOf(b.name);
+      const normalizedA = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+      const normalizedB = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+      return normalizedA - normalizedB;
+    });
+  }
+
   return (
     <section className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
       <PageHeader
@@ -14,7 +26,10 @@ export default function Projects() {
 
       <div className="space-y-20">
         {projectGroups.map((group) => {
-          const items = projects.filter((p) => p.group === group.key);
+          const items = sortByDisplayOrder(
+            projects.filter((p) => p.group === group.key),
+            group.key,
+          );
           if (!items.length) return null;
           return (
             <div key={group.key}>
