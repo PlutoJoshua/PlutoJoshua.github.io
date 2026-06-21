@@ -1,34 +1,36 @@
-# Kim Soyoung · PlutoJoshua Portfolio
+# Kim Soyoung · Portfolio
 
-AI Product Builder portfolio built with Vite, React, and Tailwind CSS.
+AI Engineer / Product Builder 포트폴리오 사이트.
+핀테크 도메인의 LLM 에이전트와 자동화 프로젝트를 정리합니다.
 
-## Local development
+🔗 **Live:** https://plutojoshua.github.io
+
+## 기술 스택
+
+React 19 · Vite · Tailwind CSS · React Router
+
+## 구조
+
+콘텐츠는 UI와 분리되어 `src/data/`에서 관리합니다.
+
+| File | Content |
+|------|---------|
+| `src/data/profile.js`   | 프로필 · 소개 · Currently |
+| `src/data/projects.js`  | 프로젝트 (featured / opensource / automation) |
+| `src/data/career.js`    | 경력 타임라인 |
+| `src/data/education.js` | 학력 · 자격증 |
+| `src/data/skills.js`    | 스킬 카드 |
+
+## 개발
 
 ```bash
 npm install
-npm run dev
+npm run dev      # 로컬 개발 서버
+npm run build    # docs/ 로 프로덕션 빌드
+npm run deploy   # GitHub Pages 배포
 ```
 
-## Build
+## 배포
 
-```bash
-npm run build
-```
-
-## GitHub Pages
-
-For a user site, create a repository named `PlutoJoshua.github.io`, push this project, then enable GitHub Pages from the repository settings.
-
-If deploying as a project page, update `base` in `vite.config.js` to the repository path.
-
-This project builds production assets into `docs/` for GitHub Pages.
-
-```bash
-npm run build
-npm run deploy
-```
-
-## Notes
-
-- Contact links are managed in `src/data/profile.js`.
-- Private/internal projects are marked without public links.
+GitHub Pages가 `docs/` 폴더를 서빙합니다.
+프로젝트 페이지로 배포하려면 `vite.config.js`의 `base`를 레포 경로로 변경하세요.

@@ -37,7 +37,7 @@ export default function Projects() {
                 <SectionLabel>{group.label}</SectionLabel>
                 <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{group.title}</h2>
                 {group.description ? (
-                  <p className="mt-4 leading-7 text-muted dark:text-muted-d">{group.description}</p>
+                  <p className="mt-4 break-keep leading-7 text-muted dark:text-muted-d">{group.description}</p>
                 ) : null}
               </div>
               <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

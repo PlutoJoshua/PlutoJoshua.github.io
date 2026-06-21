@@ -48,7 +48,7 @@ export default function About() {
             <Sparkles className="h-4 w-4 shrink-0 text-accent" />
             {profile.badge}
           </div>
-          <h1 className="max-w-3xl text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl whitespace-pre-line break-keep text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
             {profile.headline}
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted dark:text-muted-d sm:text-xl">
