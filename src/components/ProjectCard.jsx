@@ -1,12 +1,25 @@
-import { ArrowUpRight, Star } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowUpRight, Maximize2, Star } from 'lucide-react';
 import GitHubMark from './GitHubMark';
+import ProjectModal from './ProjectModal';
 
 export default function ProjectCard({ project }) {
   const { github, demo } = project.links || {};
   const hasLink = github || demo;
+  const hasMedia = (project.media?.shots?.length || 0) > 0;
+  const [open, setOpen] = useState(false);
 
   return (
-    <article className="group flex flex-col rounded-[1.75rem] border border-ink/10 bg-white/70 p-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-soft dark:border-line-d dark:bg-paper-d/70">
+    <article
+      onClick={hasMedia ? () => setOpen(true) : undefined}
+      onKeyDown={hasMedia ? (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setOpen(true)) : undefined}
+      role={hasMedia ? 'button' : undefined}
+      tabIndex={hasMedia ? 0 : undefined}
+      aria-haspopup={hasMedia ? 'dialog' : undefined}
+      className={`group flex flex-col rounded-[1.75rem] border border-ink/10 bg-white/70 p-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-soft dark:border-line-d dark:bg-paper-d/70 ${
+        hasMedia ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent' : ''
+      }`}
+    >
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex flex-wrap items-center gap-2">
@@ -58,16 +71,16 @@ export default function ProjectCard({ project }) {
         ))}
       </div>
 
-      <div className="mt-auto pt-6">
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-6">
         {hasLink ? (
           <div className="flex flex-wrap gap-4">
             {github ? (
-              <a href={github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
+              <a href={github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
                 <GitHubMark className="h-4 w-4" /> GitHub
               </a>
             ) : null}
             {demo ? (
-              <a href={demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
+              <a href={demo} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-accent dark:text-paper">
                 Live <ArrowUpRight className="h-4 w-4" />
               </a>
             ) : null}
@@ -77,7 +90,14 @@ export default function ProjectCard({ project }) {
             {project.caseStudy ? 'Private · Case study on request' : 'Internal / private project'}
           </p>
         )}
+        {hasMedia ? (
+          <span className="inline-flex items-center gap-1.5 text-sm font-bold text-accent">
+            <Maximize2 className="h-4 w-4" /> 화면 보기
+          </span>
+        ) : null}
       </div>
+
+      {open ? <ProjectModal project={project} onClose={() => setOpen(false)} /> : null}
     </article>
   );
 }

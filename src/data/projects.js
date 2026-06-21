@@ -132,6 +132,11 @@ export const projects = [
     stack: ['Python', 'PyTorch', 'KoGPT2', 'Gemini API', 'Django', 'Airflow'],
     links: { github: 'https://github.com/PlutoJoshua/CodeGenius_Project' },
     org: 'team project',
+    media: {
+      device: 'browser',
+      label: 'codegenius',
+      shots: ['/projects/codegenius/manual2.png', '/projects/codegenius/manual3.png'],
+    },
   },
   {
     name: 'GenieNavi',
