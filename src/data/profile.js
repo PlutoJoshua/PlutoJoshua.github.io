@@ -22,7 +22,9 @@ export const metrics = [
   ['10+', 'AI / automation projects'],
   ['300+', 'AI news operation days'],
   ['20%', 'CS workload reduced'],
+  ['100+', 'Meetings summarized'],
   ['3min', 'WordPress draft publish'],
+  ['67.75%', 'FX 4h holdout accuracy'],
 ];
 
 // About 페이지 본문.

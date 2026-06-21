@@ -72,7 +72,7 @@ export default function About() {
           </p>
           <h2 className="mt-4 text-3xl font-black">{currently.title}</h2>
           <p className="mt-4 leading-7 text-muted dark:text-muted-d">{currently.description}</p>
-          <div className="mt-8 grid grid-cols-2 gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-3 xl:grid-cols-3">
             {metrics.map(([value, label]) => (
               <div key={label} className="rounded-3xl border border-line bg-paper/70 p-5 dark:border-line-d dark:bg-ink-d/70">
                 <div className="text-3xl font-black text-accent">{value}</div>
