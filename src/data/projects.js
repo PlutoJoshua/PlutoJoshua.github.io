@@ -11,7 +11,7 @@ export const projects = [
     category: 'AI · Finance',
     status: '진행중',
     group: 'featured',
-    year: '2024 –',
+    year: '2026',
     role: 'ML Engineer',
     description:
       '하나은행 공식 고시 환율 10년치와 매크로·크로스레이트 데이터를 결합해 USD/KRW 방향 예측 및 환헤지 의사결정 시그널을 실험하는 금융 AI 엔진입니다.',
@@ -29,7 +29,7 @@ export const projects = [
     category: 'Multi-Agent · Finance',
     status: '진행중',
     group: 'featured',
-    year: '2024 –',
+    year: '2026',
     role: 'AI Engineer',
     description:
       'TradingView 신호를 LangGraph 멀티 에이전트가 해석하고, ML 최적화 파라미터를 Pine Script에 자동 전달하는 AI 트레이딩 파이프라인입니다.',
@@ -47,7 +47,7 @@ export const projects = [
     category: 'Multi-Agent System',
     status: '심사중',
     group: 'featured',
-    year: '2024',
+    year: '2026',
     role: 'Creator',
     description:
       '아이디어 입력만으로 AI 팀이 기획, 디자인, 개발, 배포 산출물과 실행 가능한 앱 코드를 생성하는 멀티 에이전트 제품 개발 파이프라인입니다.',
@@ -64,7 +64,7 @@ export const projects = [
     category: 'Voice · Multimodal',
     status: '완료',
     group: 'featured',
-    year: '2024',
+    year: '2026',
     role: 'Developer · Kakao AI Ambassador',
     description:
       'Kanana-o 멀티모달 AI로 음성 톤과 메뉴판 이미지를 함께 해석해 "아무거나" 뒤의 숨은 선호를 찾아주는 Flutter 의사결정 앱입니다.',
@@ -83,7 +83,7 @@ export const projects = [
     category: 'Multi-Agent · Finance',
     status: '협업',
     group: 'opensource',
-    year: '2024',
+    year: '2026',
     role: 'Contributor',
     description: 'LangGraph 기반 개인화 투자 자문 멀티 에이전트. Bull/Bear/Balanced 토론과 KYC, RAG로 리포트를 생성합니다.',
     highlights: [
@@ -100,7 +100,7 @@ export const projects = [
     category: 'Multi-Agent · Finance',
     status: '협업',
     group: 'opensource',
-    year: '2024',
+    year: '2026',
     role: 'Contributor',
     description: 'Supervisor가 뉴스 검색·리포트 에이전트를 조율하는 금융 시장 분석 멀티 에이전트 시스템입니다.',
     highlights: [
@@ -118,7 +118,7 @@ export const projects = [
     category: 'RAG · QA Bot',
     status: '완료',
     group: 'opensource',
-    year: '2023',
+    year: '2024',
     role: 'Developer',
     description: 'OpenSearch와 LLM을 활용해 교육 운영 문의에 답하는 RAG 기반 QA 챗봇입니다. (초기 RAG 프로젝트)',
     highlights: [
@@ -154,7 +154,7 @@ export const projects = [
     category: 'Automation Pipeline',
     status: '완료',
     group: 'automation',
-    year: '2024',
+    year: '2026',
     role: 'Creator',
     description: '뉴스 수집 → AI 요약 → TTS → 자막 → 영상 합성 → 유튜브 업로드까지 자동화하는 숏츠 생성 파이프라인입니다.',
     highlights: [
@@ -170,7 +170,7 @@ export const projects = [
     category: 'AI · FinTech',
     status: '진행중',
     group: 'automation',
-    year: '2024 –',
+    year: '2026',
     role: 'AI Engineer',
     description:
       'LangGraph 기반 라우팅 에이전트가 고객 CS, 내부 DB 검색, 업무 함수 실행을 분기 처리하는 사내 AI 어시스턴트입니다.',
@@ -187,15 +187,15 @@ export const projects = [
     category: 'Generative · Content',
     status: '진행중',
     group: 'automation',
-    year: '2025',
+    year: '2026',
     role: 'Creator',
     description:
-      '캐릭터 웹툰 컷을 자동 생성하는 인스타그램 콘텐츠 파이프라인. 이미지는 그림만, 텍스트는 전부 분리해 Canva에서 합성합니다.',
+      '로컬 AI로 캐릭터 일관성 있는 인스타툰 컷을 만들고, 나레이션·대사를 Canva Bulk Create용 표로 분리해 대량 제작하는 콘텐츠 파이프라인입니다.',
     highlights: [
-      '이미지/텍스트 완전 분리 - 대사 수정 시 이미지 재생성 불필요',
-      '3중 텍스트 누수 방어 (프롬프트·Pydantic·OCR 가드)',
-      'SDXL + IP-Adapter / LoRA 캐릭터 일관성',
-      'LLM 스토리보드 → 이미지 → Canva Bulk Create XLSX',
+      '인스타툰 1편 제작 시간을 3~5시간에서 대량 생성 기준 약 1시간으로 단축',
+      '이미지와 텍스트를 완전 분리해 대사 수정 시 이미지 재생성 없이 Canva에서 재합성',
+      '프롬프트·Pydantic·negative prompt·OCR 가드로 이미지 내 텍스트 누수 방어',
+      'LLM 스토리보드 → SDXL/IP-Adapter/LoRA 이미지 → Canva Bulk Create XLSX 자동 생성',
     ],
     stack: ['Python', 'SDXL', 'diffusers', 'Ollama', 'EasyOCR'],
     links: {},
@@ -217,6 +217,23 @@ export const projects = [
     ],
     stack: ['Python', 'WordPress REST API', 'Markdown', 'pydantic-settings'],
     links: { demo: 'https://from0lab.com' },
+  },
+  {
+    name: 'STT & Summarization Tool',
+    category: 'Speech AI · Productivity',
+    status: '완료',
+    group: 'automation',
+    year: '2025',
+    role: 'AI Engineer',
+    description:
+      '음성 파일을 텍스트로 변환하고 회의록·액션 아이템 형태로 요약해 공유하는 STT 기반 회의 기록 자동화 도구입니다.',
+    highlights: [
+      '실제 사내 회의 요약 업무에 사용, 회의록 작성 시간 60분 → 10분으로 단축',
+      '누적 100건+ 회의 음성 처리, 회의·강의·인터뷰 요약 템플릿과 Markdown 결과 다운로드 제공',
+      'OpenAI Whisper API, 로컬 Whisper, pyannote 화자 분리, OpenAI·Gemini·Ollama 요약 모델 교체 지원',
+    ],
+    stack: ['Python', 'Flask', 'Whisper', 'Gemini', 'Ollama'],
+    links: { github: 'https://github.com/PlutoJoshua/stt' },
   },
 ];
 
