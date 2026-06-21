@@ -7,6 +7,13 @@ export const education = [
     field: 'AI융합 교육설계·경영 (교육공학-교육행정 융합)',
     period: { start: '2018.02', end: '2020.08' },
     note: '',
+    thesis: {
+      title:
+        '롸이거루스의 정교화 이론에 의한 유튜브(Youtube) 강의 동영상 분석 : 한국사능력검정시험 대비 컨텐츠 중심으로',
+      subtitle:
+        'An analysis of lectures on Youtube using Reigeluth’s elaboration theory : focusing on content for the Korean history proficiency test',
+      url: 'https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=0d91b5222286203dffe0bdc3ef48d419&keyword=%EC%9D%B4%EC%98%88%EA%B2%BD%20%EA%B9%80%EC%86%8C%EC%98%81',
+    },
   },
 ];
 
