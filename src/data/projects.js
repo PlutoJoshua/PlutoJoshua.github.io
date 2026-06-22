@@ -24,6 +24,11 @@ export const projects = [
     links: {},
     caseStudy: true,
     org: 'Quantisight',
+    media: {
+      device: 'browser',
+      label: 'quantisight',
+      shots: ['/projects/quantisight/result.png', '/projects/quantisight/plan.png'],
+    },
   },
   {
     name: 'Hedge Decision Engine',
@@ -102,7 +107,7 @@ export const projects = [
     media: {
       device: 'phone',
       shots: [
-        '/projects/amuguna/home-light.png',
+        '/projects/amuguna/home-dark.png',
         '/projects/amuguna/chat-voice-light.png',
         '/projects/amuguna/menu-result-light.png',
         '/projects/amuguna/decision-card-light.png',
