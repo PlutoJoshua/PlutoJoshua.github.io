@@ -70,6 +70,10 @@ export const projects = [
     stack: ['FastAPI', 'LangGraph', 'OpenAI GPT-4', 'Pine Script', 'Docker'],
     links: {},
     caseStudy: true,
+    media: {
+      device: 'plain',
+      shots: ['/projects/finorbit/architecture.png', '/projects/finorbit/logo.png'],
+    },
   },
   {
     name: 'Builder',

@@ -2,6 +2,18 @@
 // 부모는 definite height 를 가진 flex 컨테이너여야 한다(높이 기준 맞춤).
 // device: 'browser'(가로/웹) | 'phone'(세로/모바일)
 export default function DeviceFrame({ device = 'browser', src, alt, label }) {
+  if (device === 'plain') {
+    // 로고/다이어그램 등 앱 화면이 아닌 이미지 -> 프레임 없이 박스에 맞춰 표시.
+    return (
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="max-h-full max-w-full rounded-xl border border-ink/10 bg-white object-contain shadow-soft dark:border-line-d"
+      />
+    );
+  }
+
   if (device === 'phone') {
     // 세로 스크린샷 -> 높이에 맞춰 축소. 스크린샷에 상태바가 포함되어 베젤만 둔다.
     return (
