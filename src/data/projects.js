@@ -186,6 +186,10 @@ export const projects = [
     stack: ['Python', 'OpenSearch', 'FastAPI', 'AWS', 'LLM'],
     links: { github: 'https://github.com/bgmbgm94/Big_07_Doc_Project' },
     org: 'team project',
+    media: {
+      device: 'plain',
+      shots: ['/projects/genie-navi/chat-1.png', '/projects/genie-navi/chat-2.png'],
+    },
   },
 
   // ───────── Automation Experiments ─────────

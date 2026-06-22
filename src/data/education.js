@@ -29,13 +29,25 @@ export const trainings = [
   },
 ];
 
-// 자격증 (칩 형태로 나열). name 만 필수, note 는 선택(예: 필기).
-export const licenses = [
-  { name: 'SQLD' },
-  { name: 'ADsP' },
-  { name: '정보처리기사', note: '필기' },
-  { name: '빅데이터분석기사', note: '필기' },
-  { name: '컴퓨터활용능력 1급' },
-  { name: '직업상담사' },
-  { name: '평생교육사' },
+// 자격증 (성격별 그룹 + 칩 형태로 나열). name 만 필수, note 는 선택(예: 필기).
+export const licenseGroups = [
+  {
+    label: 'IT · 데이터',
+    items: [
+      { name: 'SQLD' },
+      { name: 'ADsP' },
+      { name: '정보처리기사', note: '필기' },
+      { name: '빅데이터분석기사', note: '필기' },
+      { name: '컴퓨터활용능력 1급' },
+    ],
+  },
+  {
+    label: '일반',
+    items: [
+      { name: '평생교육사' },
+      { name: '직업상담사' },
+      { name: '회계관리 2급' },
+      { name: '한국사능력검정시험 1급' },
+    ],
+  },
 ];
