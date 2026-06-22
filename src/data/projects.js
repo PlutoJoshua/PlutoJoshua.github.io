@@ -91,6 +91,15 @@ export const projects = [
     ],
     stack: ['Google ADK', 'FastAPI', 'Next.js', 'PostgreSQL', 'Redis'],
     links: { github: 'https://github.com/PlutoJoshua/Builder' },
+    media: {
+      device: 'plain',
+      shots: [
+        '/projects/builder/login.png',
+        '/projects/builder/pipeline.png',
+        '/projects/builder/devoffice.png',
+        '/projects/builder/planning.png',
+      ],
+    },
   },
   {
     name: 'amuguna',
