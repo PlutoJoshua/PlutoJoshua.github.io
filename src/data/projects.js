@@ -42,6 +42,11 @@ export const projects = [
     stack: ['Python', 'PyTorch', 'LightGBM', 'Vertex AI'],
     links: {},
     caseStudy: true,
+    media: {
+      device: 'browser',
+      label: 'decision-engine',
+      shots: ['/projects/hedge/backtest.png'],
+    },
   },
   {
     name: 'FinOrbit',
