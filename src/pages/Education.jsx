@@ -29,7 +29,7 @@ export default function Education() {
       {licenseGroups?.length ? (
         <div className="mt-16">
           <SectionLabel>Licenses & Certifications</SectionLabel>
-          <div className="space-y-6">
+          <div className="grid gap-8 md:grid-cols-2">
             {licenseGroups.map((group) => (
               <div key={group.label}>
                 <p className="mb-3 text-sm font-semibold text-muted dark:text-muted-d">{group.label}</p>
